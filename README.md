@@ -26,7 +26,7 @@
 
 # Ramas
 
-- [DB](#DB): Base de datos :flopy_disk:
+- [DB](#DB): Base de datos 💾
 - [Prog](#Programadores): :computer:
 - [Diseño](#Diseño): Diseño de interfaces :scissors:+:black_nib:+:pencil2:+:space_invader:
 - [Documentación](#Documentacion) :book:
