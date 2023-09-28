@@ -2,8 +2,8 @@
 
 # Roles y funciones
 
--[Programadores]: :computer: + :boy: -[Fernando] :boy: -[Scott] :boy: -[Alan] :boy: -[Juan_Pablo] :boy: -[Javier] :boy: -[Saul] :boy: -[Dseño_interfaces]: -[Paulina] :woman: -[Adriana]:girl: -[Base_de_Datos]: -[Gilberto] :boy: -[Adrian] :boy: -[Ricardo] :man: -[Christo]:man: -[Roman] :boy: -[Luis_Trinidad]:boy: -[Documentación]: -[Martin] :boy: -[Dikembe] :boy: -[Yael] :boy:
+-[Programadores](#Programadores): :computer: + :boy: -[Fernando](#Fernando) :boy: -[Scott](#Scott) :boy: -[Alan](#Alan) :boy: -[Juan_Pablo](#Juan_Pablo) :boy: -[Javier](#Javier) :boy: -[Saul](#Saul) :boy: -[Dseño_interfaces](#Diseño_interfaces): -[Paulina](#Paulina) :woman: -[Adriana](#Adriana):girl: -[Base_de_Datos](#Base_de_Datos): -[Gilberto](#Gilberto) :boy: -[Adrian](#Adrian) :boy: -[Ricardo](#Ricardo) :man: -[Christo](#Christo):man: -[Roman] :boy: -[Luis_Trinidad](#Luis_Trinidad):boy: -[Documentación](#Documentacion): -[Martin](#Martin) :boy: -[Dikembe](#Dikembe) :boy: -[Yael](#Yael) :boy:
 
 # Ramas
 
--[DB]: Base de datos :flopy_disk: -[Prog]: programadores :computer: -[Diseño]: Diseño de interfaces :scissors:+:black_nib:+:pencil2:+:space_invader: -[Documentación] :book:
+-[DB](#DB): Base de datos :flopy_disk: -[Prog](#Programadores): :computer: -[Diseño](#Diseño): Diseño de interfaces :scissors:+:black_nib:+:pencil2:+:space_invader: -[Documentación](#Documentacion) :book:
