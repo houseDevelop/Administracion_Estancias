@@ -12,7 +12,7 @@
 - [Dseño_interfaces](#Diseño_interfaces):
   - [Paulina](#Paulina) :woman:
   - [Adriana](#Adriana):girl:
-  - [Base_de_Datos](#Base_de_Datos):
+- [Base_de_Datos](#Base_de_Datos):
   - [Gilberto](#Gilberto) :boy:
   - [Adrian](#Adrian) :boy:
   - [Ricardo](#Ricardo) :man:
