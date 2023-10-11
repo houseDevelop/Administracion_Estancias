@@ -1,0 +1,7 @@
+.env 
+node_modules
+
+DB_Schema.drawio
+datanase.sql
+
+
