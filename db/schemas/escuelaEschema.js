@@ -15,15 +15,15 @@ const escuelaSchema = new mongoose.Schema({
   },
   programaEducativoId:{
     type:mongoose.Types.ObjectId,
-    required:true,
+    ref:'ProgramaEducativo',
   },
   domicilioId:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Domicilio"
   },
   telefonoId:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:'Telefono'
   }
 })
 

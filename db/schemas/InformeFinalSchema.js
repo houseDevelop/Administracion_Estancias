@@ -3,7 +3,7 @@ import mongoose, { Mongoose } from 'mongoose'
 const informeFinalSchema=new mongoose.Schema({
   alumnoId:{
     type:mongoose.Types.ObjectId,
-    required:true,
+    ref:"UserGeneral",
   },
   Preguntas:{
     type:mongoose.Types.Array,

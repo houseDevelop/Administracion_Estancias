@@ -1,14 +1,65 @@
 <%- include('templates/header',{tituloweb:"Index"}) %>
 
   <body>
-    <form>
-      <div class="row">
+    <form action="/register" method="POST">
+      <div class="row mt-sm-5 p-sm-2">
         <div class="col">
-          <input type="text" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name">
+          <input type="text" id="matricula" name="Clave" class="form-control" placeholder="Matricula o clave"
+            maxlength="8" required pattern="[0-9]{8}">
         </div>
       </div>
+      <h3 class="text-secondary mt-sm-2 pl-3"> Datos generales</h2>
+        <div class="row  p-sm-2">
+          <div class="col">
+            <input type="text" id="name" name="Name" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <% if(value==1){ %>
+          <div class="row p-sm-2">
+            <div class="col">
+              <input type="text" id="Afiliacion" name="Afiliacion" class="form-control"
+                placeholder="Numero de Seguro Social">
+            </div>
+            <div class="col">
+              <input type="date" id="fecha" name="fecha_nac" class="form-control" placeholder="mm/dd/yyy">
+            </div>
+            <div class="col">
+              <select id="repasword" name="repsw" class="form-control mb-3">
+                <% for(var i=0;i<=carreras.length;i++){ %>
+                  <option>
+                    <%= carreras[i] %>
+                  </option>
+                  <%}%>
+              </select>
+            </div>
+          </div>
+          <div class="row p-sm-2">
+            <div class="col">
+              <input type="text" id="email" name="Correo" class="form-control" placeholder="example@example.com">
+            </div>
+            <div class="col">
+              <input type="password" id="psw" name="psw" class="form-control" placeholder="password">
+            </div>
+            <div class="col">
+              <input type="password" id="repasword" name="repsw" class="form-control" placeholder="password validation">
+            </div>
+          </div>
+          <% }else{ %>
+            <div class="row p-sm-2">
+              <div class="col">
+                <input type="text" id="email" name="Correo" class="form-control" placeholder="example@example.com">
+              </div>
+              <div class="col">
+                <input type="password" id="psw" name="psw" class="form-control" placeholder="password">
+              </div>
+              <div class="col">
+                <input type="password" id="repasword" name="repsw" class="form-control"
+                  placeholder="password validation">
+              </div>
+            </div>
+            <% } %>
     </form>
     <%- include('templates/footer') %>

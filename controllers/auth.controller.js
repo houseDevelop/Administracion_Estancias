@@ -64,8 +64,23 @@ export const register = async(req,res)=>{
       return res.status(403).json({error:error.message})
     }
    
-  }
+  }else if(Clave.length>=6 && Clave.length()<=8 ){
+    const {numero_Afiliacion,fecha_nacimiento,correo,lada,telefono,promedio,creditos,calle, colonia, ciudad,numero, codigoPostal}=req.body
+    try{
+      let rol = await Rol.findOne({rol:'Docente'})
+      let program = await ProgramaEducativo.findOne({carrera:programaEducativo})
+      let user = await UserGeneral.findOne({Clave:Clave})
+      if(user) throw new Error(`El usuario con clave ${Clave} ya se encuentra registrado`)
 
+      user = new UserGeneral({Clave:Clave,Name:Name,lastName:lastName,RolId:rol.id,programaEducativoId:program.id,psw:psw})
+
+      await user.save()
+        
+    }catch(error){
+      console.log(error);
+      return res.status(403).json({error:error.message})
+    }
+  }
 }
 
 export const refreshToken = (req,res)=>{
@@ -77,5 +92,16 @@ export const logout = (req,res)=>{
 };
 
 export const info= async (req,res)=>{
-
+  
+  try{
+    
+    let program = await ProgramaEducativo.find({}).lean()
+    // console.log(program)
+    // console.log(carreras)
+    res.status(200).render('data',{titulo:'DATA',value:1,carreras:program})
+  }catch(error){
+    console.log(error)
+    res.status(403).json({error:error.message})
+  }
 };
+

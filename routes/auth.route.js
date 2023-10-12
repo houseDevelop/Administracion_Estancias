@@ -1,5 +1,5 @@
 import express from 'express';
-import {main_page,login,logout,register,refreshToken} from '../controllers/auth.controller.js';
+import {main_page,login,logout,register,refreshToken,info} from '../controllers/auth.controller.js';
 import {body} from 'express-validator'
 import { validatorExpress } from '../middlewares/validatorExpress.js';
 
@@ -16,4 +16,5 @@ body('password','Contraseña minimo 6 caracteres').trim().isLength({min:6}).cust
 }),
 ],validatorExpress,register)
 
+router.get('/data',info)
 export default router;
