@@ -7,14 +7,7 @@ const router = express.Router();
 
 router.get('/',main_page);
 
-router.post('/register',[body('email','Ingrese un email valido').trim().isEmail().normalizeEmail(),
-body('password','Contraseña minimo 6 caracteres').trim().isLength({min:6}).custom((value,{req})=>{
-  if (value!== req.body.repassword){
-    throw new Error("No coinciden las contraseñas")
-  }
-  return value;
-}),
-],validatorExpress,register)
+router.post('/register',register)
 
 router.get('/data',info)
 export default router;

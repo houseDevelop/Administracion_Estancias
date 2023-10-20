@@ -1,65 +1,127 @@
-<%- include('templates/header',{tituloweb:"Index"}) %>
+<%- include('templates/header',{tituloweb:"Data"}) %>
 
   <body>
     <form action="/register" method="POST">
       <div class="row mt-sm-5 p-sm-2">
-        <div class="col">
+        <div class="col-4">
+          <label>Matricula o clave</label>
           <input type="text" id="matricula" name="Clave" class="form-control" placeholder="Matricula o clave"
-            maxlength="8" required pattern="[0-9]{8}">
+            maxlength="9" required pattern="[0-9]{8}">
         </div>
       </div>
       <h3 class="text-secondary mt-sm-2 pl-3"> Datos generales</h2>
         <div class="row  p-sm-2">
           <div class="col">
+            <label>Nombre</label>
             <input type="text" id="name" name="Name" class="form-control" placeholder="First name">
           </div>
           <div class="col">
+            <label>Apellido</label>
             <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name">
           </div>
+          <div class="col">
+            <label>Programa Educativo o carrera</label>
+            <select id="progEdu" name="programaEducativo" class="form-control mb-3">
+              <% for(var i=0;i<carreras.length;i++){ %>
+                <option value="<%= carreras[i][0]%>">
+                  <%= carreras[i][1] %>
+                </option>
+                <%}%>
+            </select>
+          </div>
+
         </div>
         <% if(value==1){ %>
           <div class="row p-sm-2">
             <div class="col">
-              <input type="text" id="Afiliacion" name="Afiliacion" class="form-control"
-                placeholder="Numero de Seguro Social">
+              <label>Numero de seguro social</label>
+              <input type="text" id="Afiliacion" name="numero_Afiliacion" class="form-control"
+                placeholder="NSS(Numero de Seguro Social)">
             </div>
             <div class="col">
-              <input type="date" id="fecha" name="fecha_nac" class="form-control" placeholder="mm/dd/yyy">
+              <label>Fecha de nacimiento</label>
+              <input type="date" id="fecha" name="fecha_nacimiento" class="form-control" placeholder="mm/dd/yyy">
+            </div>
+          </div>
+          <div class="row p-sm-2">
+            <div class="col-2">
+              <label>Lada</label>
+              <input type="text" id="lada" name="lada" class="form-control" placeholder="+52">
             </div>
             <div class="col">
-              <select id="repasword" name="repsw" class="form-control mb-3">
-                <% for(var i=0;i<=carreras.length;i++){ %>
-                  <option>
-                    <%= carreras[i] %>
-                  </option>
-                  <%}%>
-              </select>
+              <label>Telefono</label>
+              <input type="text" id="Tel" name="telefono" class="form-control" placeholder="123-4432-222" minlength="10"
+                maxlength="11">
+            </div>
+            <div class="col-2">
+              <label>Codigo Postal</label>
+              <input type="text" id="CP" name="codigoPostal" class="form-control" placeholder="12311">
+            </div>
+          </div>
+          <div class="row p-sm-2">
+            <div class="col-3">
+              <label>Creditos</label>
+              <input type="text" class="form-control" id="prom" name="promedio" placeholder="7.8, 9.9, 8.2, etc..">
+            </div>
+            <div class="col-3">
+              <label>Creditos</label>
+              <input type="text" class="form-control" id="cred" name="creditos" placeholder="400">
+            </div>
+          </div>
+          <div class="row p-sm-2">
+            <div class="col-3">
+              <label>Calle</label>
+              <input type="text" id="calle" name="calle" class="form-control" placeholder="av.panchito">
+            </div>
+            <div class="col-3">
+              <label>Colonia</label>
+              <input type="text" id="Colonia" name="colonia" class="form-control" placeholder="colonia palos prietos">
+            </div>
+            <div class="col-3">
+              <label>Ciudad</label>
+              <input type="text" id="ciudad" name="ciudad" class="form-control" placeholder="Mazatlán, Culiaca, etc..">
+            </div>
+            <div class="col-2">
+              <label>Numero exterior</label>
+              <input type="text" id="numero" name="numero" class="form-control" placeholder="#12">
             </div>
           </div>
           <div class="row p-sm-2">
             <div class="col">
+              <label>Correo o Email</label>
               <input type="text" id="email" name="Correo" class="form-control" placeholder="example@example.com">
             </div>
             <div class="col">
+              <label>Contraseña</label>
               <input type="password" id="psw" name="psw" class="form-control" placeholder="password">
             </div>
             <div class="col">
+              <label>Confirmacion de contraseña</label>
               <input type="password" id="repasword" name="repsw" class="form-control" placeholder="password validation">
             </div>
           </div>
           <% }else{ %>
             <div class="row p-sm-2">
-              <div class="col">
+              <!-- <div class="col">
+                <label>Correo o Email</label>
                 <input type="text" id="email" name="Correo" class="form-control" placeholder="example@example.com">
-              </div>
+              </div> -->
               <div class="col">
+                <label>Contraseña</label>
                 <input type="password" id="psw" name="psw" class="form-control" placeholder="password">
               </div>
               <div class="col">
+                <label>Confirmacion de contraseña</label>
                 <input type="password" id="repasword" name="repsw" class="form-control"
                   placeholder="password validation">
               </div>
             </div>
+
             <% } %>
+              <div class="row p-sm-2">
+                <div class="col">
+                  <input type="submit" class="btn btn-success" value="Registrar">
+                </div>
+              </div>
     </form>
     <%- include('templates/footer') %>
