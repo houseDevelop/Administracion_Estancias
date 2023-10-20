@@ -21,17 +21,17 @@ const empresaSchema = new mongoose.Schema({
     type:String,
     required:true
   },
-  Coreo:{
+  coreoId:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Email"
   },
-  Domicilio:{
+  domicilio:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Domicilio"
   },
-  Telefono:{
+  telefonoId:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Telefono"
   },
 })
 

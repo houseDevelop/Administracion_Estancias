@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const reporteSchema=new mongoose.Schema({
   alumnoId:{
     type:mongoose.Types.ObjectId,
-    required:true,
+    ref:'UserGeneral',
   },
   perido:{
     type:String,

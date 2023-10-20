@@ -19,11 +19,11 @@ const userGenSchema = new mongoose.Schema(
     },
     RolId:{
       type:mongoose.Types.ObjectId,
-      required:true,
+      ref:'Rol',
     },
     programaEducativoId:{
       type: mongoose.Types.ObjectId,
-      required:true
+      ref:"ProgramaEducativo"
     },
     psw:{
       type:String,

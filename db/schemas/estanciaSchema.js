@@ -19,7 +19,7 @@ const estanciaSchema = new mongoose.Schema({
   },
   ActividadesID:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Actividades"
   }
 })
 

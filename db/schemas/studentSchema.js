@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const alumnoSchema=new mongoose.Schema({
   user_id:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:'UserGeneral'
   },
   Numero_Afiliacion:{
     type:String,
@@ -15,19 +15,19 @@ const alumnoSchema=new mongoose.Schema({
   },
   Domicilio:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Domicilio"
   },
   Correo:{
     type:mongoose.Types.ObjectId,
-    required:true,
+    ref:'Email',
   },
   Telefono:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:"Telefono"
   },
   statusAcademico_Id:{
     type:mongoose.Types.ObjectId,
-    required:true
+    ref:'EstatusAcademico'
   }
 })
 
