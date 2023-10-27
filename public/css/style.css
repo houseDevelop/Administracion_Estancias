@@ -1,0 +1,35 @@
+.colorPrincipal{
+  background-color: #691532;
+}
+.ColorOficial {
+  color: #bfa667;
+}
+.ColorBlanco {
+  color: #ffffff;
+}
+.Fondo{
+  background-color: rgb(246, 242, 236);
+}
+.Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.menu-color{
+  background-color: #848484;
+}
+.btnSalir{
+  margin-left: auto;
+}
+.colorInfo{
+  background-color: #ffefd5;
+}
+.elemento {
+  max-width: 100%;
+  overflow-x: hidden; 
+}
+.labelLetra{
+  font-size: 0.85em;
+  font-weight: bold;
+}

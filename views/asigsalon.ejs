@@ -1,0 +1,58 @@
+<%- include("layout/index", tituloweb, tipo); %>
+
+<%- include('layout/header') %>
+
+
+<div class="row m-2">
+  <div class="col text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Utiliza la clase "justify-content-start" para alinear a la izquierda -->
+        <div class="d-flex justify-content-start" style="margin-top: 10px;">
+          <a href="/Admin/regsalon" class="btn" style="margin-bottom: 10px; background-color: #691532; color: #fff;">+ Agregar Salon</a>
+        </div>
+      </div>
+    </div>
+        <!-- Estatus, Nombre, Publico/Privado, Programa educativo, Responsable, contacto -->
+        <table class="table table-striped border-secondary table-bordered" style="background-color: white;">
+            <thead>
+                <tr>
+                  <th scope="col">Estatus</th>
+                  <th scope="col">Carrera</th>
+                  <th scope="col">Semestre</th>
+                  <th scope="col">Alumnos</th>
+                  <th scope="col">Maestro</th>
+                  <th scope="col">Detalles</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <td scope="row">Asignado</td>
+                  <td>ISOF</td>
+                  <td>7</td>
+                  <td>17</td>
+                  <td>Monica Sánchez</td>
+                  <td class="text-center">
+                    <a href="/Admin" class="btn btn-sm" style="background-color: #6C757D; color: #fff;"">Asignar</span></a>
+                    <a href="/Admin/regsalon" class="btn btn-sm" style="background-color: #691532; color: #fff;">Editar</a>
+                  </td>
+                </tr>
+                <tr>
+                    <td scope="row">Sin Asignar</td>
+                    <td>ISOF</td>
+                    <td>3</td>
+                    <td>35</td>
+                    <td>Sin Maestro</td>
+                    <td class="text-center">
+                      <a href="/admin" class="btn btn-sm" style="background-color: #6C757D; color: #fff;"">Asignar</span></a>
+                      <a href="/Admin/regsalon" class="btn btn-sm" style="background-color: #691532; color: #fff;">Editar</a>
+                    </td>
+                  </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+
+
+  
+<%- include("layout/footer"); %> 

@@ -1,0 +1,38 @@
+<%- include("layout/index", tituloweb, tipo); %>
+
+<%- include('layout/header') %>
+<!-- Datos y encuestas -->
+<div class="container" style="margin-bottom: 40px;">
+  <div class="card border-secondary mt-2"">
+    <div class="card-header bg-secondary text-white text-center">
+      <span>Datos del Salon</span>
+    </div>
+    <div class="card-body colorInfo">
+      <!-- Formulario -->
+      <div class="row">
+        <%- include('layout/input', { col: 'col-5', label: 'Carrera' }); %>
+
+        <%- include('layout/input', { col: 'col-2', label: 'Num. de Alumnos' }); %>
+
+        <%- include('layout/input', { col: 'col-5', label: 'Semestre' }); %>
+
+        <%- include('layout/input', { col: 'col-12', label: 'Coordinador' }); %>
+
+        
+      </div>
+    </div>
+  </div>
+  <div class="col text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Utiliza la clase "justify-content-start" para alinear a la izquierda -->
+        <div class="d-flex justify-content-start" style="margin-top: 10px;">
+          <a href="/Admin/asigsalon" class="btn" style="margin-bottom: 10px; background-color: #691532; color: #fff; margin-bottom: 10px; margin-right: 10px;">Cancelar</a>
+          <a href="/Admin/asigsalon" class="btn" style="margin-bottom: 10px; background-color: #6C757D; color: #fff; margin-bottom: 10px;">Aceptar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("layout/footer"); %> 

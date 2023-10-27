@@ -1,0 +1,215 @@
+<%- include("layout/index", tituloweb, tipo); %>
+
+  <%- include('layout/header') %>
+
+    <!-- Datos y encuestas -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-5">
+          <div class="card border-secondary mt-2" style="height: 43rem;">
+            <div class="card-header bg-secondary text-white text-center">
+              <span>Datos del prestador</span>
+            </div>
+            <div class="card-body colorInfo">
+
+              <!-- Formulario -->
+              <div class="row">
+                <%- include('layout/input', { col: 'col-2' , label: 'Matricula' }); %>
+
+                <%- include('layout/input', { col: 'col-10' , label: 'Nombre' }); %>
+
+                <%- include('layout/input', { col: 'col-5' , label: 'Unidad' }); %>
+
+                <%- include('layout/input', { col: 'col-7' , label: 'Programa educativo' }); %>
+
+                <%- include('layout/input', { col: 'col-12' , label: 'Dirección' }); %>
+
+                <%- include('layout/input', { col: 'col-5' , label: 'Estado' }); %>
+
+                <%- include('layout/input', { col: 'col-7' , label: 'Municipio' }); %>
+
+                <%- include('layout/input', { col: 'col-6' , label: 'Localidad' }); %>
+
+                <%- include('layout/input', { col: 'col-6' , label: 'Telefono(s)' }); %>
+
+                <%- include('layout/input', { col: 'col-12' , label: 'Email' }); %>
+              </div>
+
+              <div class="row">
+                <div class="col-3 mt-3">
+                  <button class="btn" style=" background-color: #691532; color: #fff;">Enviar</button>
+                  <button class="btn" style=" background-color: #6C757D; color: #fff;">Editar</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-7">
+          <div class="card border-secondary mt-2" style="height: 43rem;">
+            <div class="card-header bg-secondary text-white text-center">
+              <span>Datos del Trámite</span>
+            </div>
+            <div class="card-body colorInfo">
+              <div class="row">
+
+                <%- include('layout/input', { col: 'col-4' , label: 'Estatus' }); %>
+
+                <%- include('layout/input', { col: 'col-8' , label: 'Asesor' }); %>
+
+
+                <div class="accordion mt-2" id="accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Generales
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Solicitud de inscripción</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Rúbrica de evaluación del prestador</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Solicitud de inscripción</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Solicitud de inscripción</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Plan de trabajo</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Reportes
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>1er Reporte Bimestral</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>2do Reporte Bimestral</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>3er Reporte Bimestral</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                          <div class="col-12">
+                            <hr>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-10 d-flex align-items-center">
+                            <h5>Reporte Final</h5>
+                          </div>
+                          <div class="col-2">
+                            <a href="/Alumno/Solicitud" class="btn"
+                              style=" background-color: #691532; color: #fff;">Enviar</a>
+                            <button class="btn" style=" background-color: #6C757D; color: #fff;">PDF</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <%- include("layout/footer"); %>

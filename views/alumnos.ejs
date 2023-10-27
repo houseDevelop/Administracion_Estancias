@@ -1,0 +1,45 @@
+<%- include("layout/index", tituloweb, tipo); %>
+
+<%- include('layout/header') %>
+
+
+<div class="row m-2">
+    <div class="col text-center">
+          <table class="table table-striped border-secondary table-bordered" style="background-color: white;">
+              <thead>
+                  <tr>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Contacto</th>
+                    <th scope="col">Grupo</th>
+
+                    <th scope="col">Reportes</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <td scope="row">Activo</td>
+                    <td>Luis Fernando Alvarez Ramirez</td>
+                    <td>6699159000</td>
+                    <td>ISOF 01</td>
+                    <td class="text-center">
+                        <a href="/Maestro/alumno" class="btn btn-sm" style="background-color: #691532; color: #fff;">Ver</a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td scope="row">Activo</td>
+                      <td>Paulina Vistoria Sanchez Hau</td>
+                      <td>6698562356</td>
+                      <td>Sin Asignar</td>
+                      <td class="text-center">
+                        <a href="/Maestro/alumno" class="btn btn-sm" style="background-color: #691532; color: #fff;">Ver</a>
+                      </td>
+                    </tr>
+                </tbody>
+          </table>
+      </div>
+  </div>
+
+
+  
+<%- include("layout/footer"); %> 

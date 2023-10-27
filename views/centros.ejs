@@ -1,0 +1,43 @@
+<%- include("layout/index", tituloweb, tipo); %>
+
+<%- include('layout/header') %>
+
+<div class="row m-2">
+    <div class="col text-center">
+        <!-- Estatus, Nombre, Publico/Privado, Programa educativo, Responsable, contacto -->
+        <table class="table table-striped border-secondary table-bordered" style="background-color: white;">
+            <thead>
+                <tr>
+                  <th scope="col">Estatus</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Publico/Privado</th>
+                  <th scope="col">Responsable</th>
+                  <th scope="col">Contacto</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <td scope="row">Activo</td>
+                  <td>CHEVROLET DE MAZATLÁN S.A DE C.V.</td>
+                  <td>AV. REFORMA 312</td>
+                  <td>PRIVADO</td>
+                  <td>LIC. YAJAIRA PERAZA</td>
+                  <td>6699159000</td>
+                </tr>
+                <tr>
+                    <td scope="row">Activo</td>
+                    <td>HYUNDAI DE MAZATLAN S.A. DE C.V.</td>
+                    <td>AV. REFORMA 314</td>
+                    <td>PRIVADO</td>
+                    <td>LIC. YAJAIRA PERAZA</td>
+                    <td>6699159000</td>
+                  </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+
+
+  
+<%- include("layout/footer"); %> 
